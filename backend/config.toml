@@ -1,0 +1,19 @@
+project_id = "jtflvthagwokueadfmtr"
+
+[functions.create-claim]
+verify_jwt = false
+
+[functions.manage-claim]
+verify_jwt = false
+
+[functions.generate-invoice]
+verify_jwt = false
+
+[functions.analytics]
+verify_jwt = false
+
+[functions.chat]
+verify_jwt = false
+
+[functions.admin-create-user]
+verify_jwt = false

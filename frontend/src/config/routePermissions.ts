@@ -1,0 +1,25 @@
+import { UserRole } from '@/types';
+
+export const routePermissions: Record<string, UserRole[]> = {
+  '/super-admin/dashboard': [UserRole.SUPER_ADMIN],
+  '/super-admin/hospitals': [UserRole.SUPER_ADMIN],
+  '/super-admin/users': [UserRole.SUPER_ADMIN],
+  '/hospital-admin/dashboard': [UserRole.HOSPITAL_ADMIN],
+  '/hospital-admin/users': [UserRole.HOSPITAL_ADMIN],
+  '/dashboard': [UserRole.BILLING, UserRole.INSURANCE],
+  '/my-dashboard': [UserRole.PATIENT],
+  '/patients': [UserRole.HOSPITAL_ADMIN, UserRole.BILLING, UserRole.INSURANCE],
+  '/claims': [UserRole.HOSPITAL_ADMIN, UserRole.BILLING, UserRole.INSURANCE, UserRole.AI_ANALYST],
+  '/my-claims': [UserRole.PATIENT],
+  '/billing': [UserRole.HOSPITAL_ADMIN, UserRole.BILLING, UserRole.PATIENT],
+  '/payment-history': [UserRole.PATIENT],
+  '/ai-monitoring': [UserRole.HOSPITAL_ADMIN, UserRole.AI_ANALYST, UserRole.INSURANCE],
+  '/analytics': [UserRole.SUPER_ADMIN, UserRole.HOSPITAL_ADMIN, UserRole.BILLING, UserRole.AI_ANALYST, UserRole.INSURANCE],
+  '/automation-logs': [UserRole.AI_ANALYST, UserRole.HOSPITAL_ADMIN],
+  '/settings': [UserRole.SUPER_ADMIN, UserRole.HOSPITAL_ADMIN, UserRole.BILLING, UserRole.INSURANCE, UserRole.AI_ANALYST, UserRole.PATIENT, UserRole.DOCTOR],
+  '/support': [UserRole.PATIENT],
+  '/audit-logs': [UserRole.SUPER_ADMIN, UserRole.HOSPITAL_ADMIN],
+  '/doctor-dashboard': [UserRole.DOCTOR],
+  '/doctor-appointments': [UserRole.DOCTOR],
+  '/book-appointment': [UserRole.PATIENT],
+};

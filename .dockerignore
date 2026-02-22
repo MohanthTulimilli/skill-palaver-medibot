@@ -1,0 +1,14 @@
+# Used when building nginx image (context: .)
+.git
+**/node_modules
+**/.env
+**/dist
+backend/target
+backend/.mvn
+backend/mvnw
+backend/mvnw.cmd
+**/__pycache__
+ml-service/venv
+**/*.md
+**/.idea
+**/.cursor

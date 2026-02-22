@@ -1,0 +1,6 @@
+# Local chat API key (never commit)
+.env.chat
+.env.razorpay
+
+# Uploaded files
+uploads/

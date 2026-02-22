@@ -1,0 +1,18 @@
+[Unit]
+Description=Medibots Health Backend
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/medibots-backend
+ExecStart=/usr/bin/java -jar /opt/medibots-backend/medibots-health-backend-1.0.0.jar
+Restart=on-failure
+RestartSec=10
+EnvironmentFile=/opt/medibots-backend/.env
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=medibots-backend
+
+[Install]
+WantedBy=multi-user.target
